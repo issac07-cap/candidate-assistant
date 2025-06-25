@@ -1,0 +1,133 @@
+/* Main layout */
+.app-container {
+    background-color: #cce5ff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Left panel */
+  .left-panel {
+    flex: 1;
+    padding: 5px;
+  }
+  
+  
+
+  .webcam-container {
+    text-align: center;
+  } 
+  
+  .circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .circle {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffffff;
+   
+    margin: 0 35px;
+  }
+  
+  .circle.active {
+    background-color: #007BFF;
+  }
+  
+  .circle:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -70px; /* distance between circles */
+    transform: translateY(-50%);
+    width:70px;
+    height: 2px;
+    background-color: #007BFF;
+  }
+
+  .webcam-view {
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+    /* border: 2px solid #007BFF; */
+  }
+  
+  .webcam-buttons {
+    margin-top: 10px;
+  }
+  
+  /* Right panel */
+  .right-panel {                        
+    flex: 1;
+    padding: 5px;
+    position: relative;
+    
+  }
+
+  .webcam-wrapper {
+    position: relative;
+  }
+  
+  .countdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #007BFF;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+  }
+  
+  
+  .question-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 15%;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .recording-status {
+    color: red;
+    font-weight: bold;              
+    margin-top: 10px;
+  }
+  
+
+
+.next-btn {
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 20px 0px 0 20px;
+  cursor: pointer;
+}
+
+
+.next-btn:hover {
+  background-color: #0056b3;
+}
+
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
